@@ -2,7 +2,7 @@ import google.generativeai as genai
 import streamlit as st
 
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 st.set_page_config(page_title="Eureka", page_icon="⚡", layout="centered")
 
@@ -14,7 +14,7 @@ header { visibility: hidden; }
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("# ⚡ EUREKA")
+st.markdown("#  EUREKA")
 st.markdown("### *Pitch your idea. Three voices. No filter.*")
 st.markdown("---")
 
