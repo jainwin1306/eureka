@@ -77,5 +77,5 @@ if prompt := st.chat_input("Pitch your idea..."):
         st.session_state.histories[name].append({"role": "model", "parts": [reply]})
         st.session_state.messages.append({"role": "assistant", "advisor": name, "content": reply})
         with st.chat_message("assistant"):
-            st.markdown(f"<span style='color:{color}; font-weight:bold'>{name}</span>", unsafe_allow_html=True)
+            st.markdown(f"<span style='color:{ADVISORS[name]['color']}; font-weight:bold'>{name}</span>", unsafe_allow_html=True)
             st.write(reply)
